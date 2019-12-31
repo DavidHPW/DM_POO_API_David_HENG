@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Meteo</title>
+    <div th:insert="~{fragment :: fragment_nav}"></div>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+</head>
+<body>
+<h1>Meteo</h1>
+<a href="https://darksky.net/poweredby/">Powered by DarkSky</a>
+<ul th:each ="meteo: ${meteo}">
+    <li th:text ="${meteo.currently.summary}" />
+    <li th:text ="${meteo.currently.temperature}"/>
+</ul >
+<ul th:each ="adresse: ${adresse}">
+    <li th:text ="${adresse}" />
+
+</ul >
+<ul th:each ="ville: ${ville}">
+    <li th:text ="${ville}" />
+</ul >
+</body>
+</html>
